@@ -1,0 +1,22 @@
+@import bourbon/bourbon
+@import neat/neat
+
+$mobile: max-width 400px 2
+=mobile
+  +breakpoint($mobile)
+    +span-columns(2)
+    @content
+
+$tablet: max-width 768px 12
+=tablet($columns: 12)
+  +breakpoint($tablet)
+    +span-columns($columns)
+    @content
+
+=gray-box
+  padding: 10px
+  margin: 20px 0
+  border-radius: 5px
+  background-color: #f7f7f7
+  border: 1px solid lightgray
+  font-family: Courier, "Helvetica", sans-serif

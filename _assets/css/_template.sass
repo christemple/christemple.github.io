@@ -1,0 +1,62 @@
+@import functions
+
+$max-width: 768px
+$font-color: #444
+
+body
+  font: 16px "Open Sans", "Helvetica Neue", "Helvetica", sans-serif
+  color: $font-color
+  +tablet
+    font-size: 14px
+  +mobile
+    font-size: 12px
+
+h1
+  font-size: 2.5em
+
+h2
+  font-size: 2em
+
+h3
+  font-size: 1.7em
+
+a
+  color: #0088cc
+  text-decoration: none
+  &:hover
+    text-decoration: underline
+
+pre
+  +gray-box
+  overflow-x: scroll
+
+blockquote
+  +gray-box
+  font-style: italic
+  quotes: "\201C""\201D""\2018""\2019"
+  p:first-child
+    &::before
+      content: open-quote
+  p:last-child
+    &::after
+      content: close-quote
+
+article
+  h1, h2
+    font-weight: bold
+  h1, h2, h3, h4, h5, h6
+    line-height: 100%
+  h1
+    padding: 20px 0 0
+  h2
+    padding: 20px 0
+  h3
+    padding: 15px 0
+
+.content
+  p, ul
+    padding: 10px 0
+  ul
+    list-style: inherit
+    li
+      margin-left: 40px

@@ -6,26 +6,32 @@
         <title>Hello World!</title>
         <meta name="viewport" content="width=device-width">
 
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
-
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/app.css">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 
     </head>
     <body>
+      <header>
+        <div class="site-wrapper">
+          <div id="avatar"><img src="/images/me.png"/></div>
+          <h1><a href="/">Chris Temple</a></h1>
+          <nav>
+            <ul>
+              <li><a href="/">home</a></li>
+              <li><a href="/about">about</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
 
-        <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">Chris Temple</a></h1>
-            <a class="extra" href="/">home</a>
-          </div>
-
-          <h2>Hello World!</h2>
-<p class="meta">10 Nov 2013</p>
-
-<div class="post">
-<p>Just writing some standard text for now and experimenting with Markdown.</p>
+      <div class="site-wrapper">
+        <section>
+          <article>
+	<header><h1>Hello World!</h1></header>
+	<div class="content">
+		<p class="date">10 Nov 2013</p>
+		<p>Just writing some standard text for now and experimenting with Markdown.</p>
 
 <h1>Here&#39;s a header 1</h1>
 
@@ -77,24 +83,21 @@ Seems I can also do stored links <a href="https://github.com/christemple" title=
 
 <p><img src="http://i.imgur.com/sg017lt.gif" alt="Mind blown">  </p>
 
-</div>
+	</div>
+</article>
 
+        </section>
+      </div>
 
-          <div class="footer">
-            <div class="contact">
-              <p>
-                Your Name<br />
-                What You Are<br />
-              </p>
-            </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/christemple">github.com/christemple</a><br />
-                <a href="https://twitter.com/temple3188">twitter.com/temple3188</a><br />
-              </p>
-            </div>
-          </div>
+      <footer>
+        <div class="site-wrapper">
+          <p>
+            Github: <a href="https://github.com/christemple">github.com/christemple</a><br>
+            Twitter: <a href="https://twitter.com/temple3188">twitter.com/temple3188</a>
+          </p>
         </div>
+      </footer>
 
+      <script type="text/javascript" src="/js/app.js"></script>
     </body>
 </html>

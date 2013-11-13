@@ -9,7 +9,7 @@ def application_running?
 end
 
 def start_application!
-	`jekyll serve --watch --detach`
+	system "jekyll serve --watch"
 end
 
 def stop_application!
