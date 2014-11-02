@@ -1,5 +1,5 @@
 ---
-layouti: post
+layout: post
 title: Ruby &raquo; shorthand syntax for each, map, reduce & more
 date: 2014-11-01
 ---
