@@ -21,9 +21,12 @@ body > header
     color: whitesmoke
   h1
     +span-columns(6)
+    padding-top: 20px
     font-family: "Pacifico", "Helvetica Neue", "Helvetica", sans-serif
     +mobile
       +span-columns(2)
+      padding-top: 10px
+      margin-bottom: 20px
 
   nav
     +span-columns(4)
@@ -40,10 +43,9 @@ body > header
 
 body section 
   +span-columns(12)
-  margin: 30px 0
+  margin-bottom: 30px
   min-height: 500px
   +tablet
-    margin: 10px 0 30px
     padding: 0 5px
   
 body > footer

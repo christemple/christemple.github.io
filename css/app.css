@@ -111,7 +111,8 @@ table {
   box-sizing: border-box; }
 
 body {
-  font: 16px "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
+  font: 20px "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
+  line-height: 24px;
   color: #444444; }
   @media screen and (max-width: 768px) {
     body {
@@ -119,7 +120,8 @@ body {
       float: left;
       margin-right: 2.35765%;
       width: 100%;
-      font-size: 15px; }
+      font-size: 15px;
+      line-height: 20px; }
       body:last-child {
         margin-right: 0; } }
   @media screen and (max-width: 400px) {
@@ -128,9 +130,13 @@ body {
       float: left;
       margin-right: 16.03631%;
       width: 100%;
-      font-size: 14px; }
+      font-size: 14px;
+      line-height: 18px; }
       body:last-child {
         margin-right: 0; } }
+
+header {
+  padding-bottom: 20px; }
 
 h1 {
   font-size: 2.5em; }
@@ -252,6 +258,7 @@ body > header {
     float: left;
     margin-right: 2.35765%;
     width: 48.82117%;
+    padding-top: 20px;
     font-family: "Pacifico", "Helvetica Neue", "Helvetica", sans-serif; }
     body > header h1:last-child {
       margin-right: 0; }
@@ -264,7 +271,9 @@ body > header {
         display: block;
         float: left;
         margin-right: 16.03631%;
-        width: 100%; }
+        width: 100%;
+        padding-top: 10px;
+        margin-bottom: 20px; }
         body > header h1:last-child {
           margin-right: 0; }
         body > header h1:last-child {
@@ -304,7 +313,7 @@ body section {
   float: left;
   margin-right: 2.35765%;
   width: 100%;
-  margin: 30px 0;
+  margin-bottom: 30px;
   min-height: 500px; }
   body section:last-child {
     margin-right: 0; }
@@ -314,7 +323,6 @@ body section {
       float: left;
       margin-right: 2.35765%;
       width: 100%;
-      margin: 10px 0 30px;
       padding: 0 5px; }
       body section:last-child {
         margin-right: 0; } }
