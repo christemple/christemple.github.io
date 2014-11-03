@@ -76,10 +76,23 @@
 <div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="o">].</span><span class="n">reduce</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">&amp;</span><span class="p">(</span><span class="no">Proc</span><span class="o">.</span><span class="n">new</span> <span class="p">{</span> <span class="o">|</span><span class="n">number</span><span class="p">,</span> <span class="n">total</span><span class="o">|</span> <span class="n">number</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="ss">:+</span><span class="p">,</span> <span class="n">total</span><span class="p">)</span> <span class="p">}))</span>
 <span class="o">=&gt;</span> <span class="mi">10</span>
 </code></pre></div>
-<p>So each time our reduce methods yields our number, it will:
-call the Proc object the Symbol class created passing (total, number)
-sends the <code>:+</code> method to be called on number passing total as a parameter.</p>
+<p>So each time our reduce methods yields our number, it will:</p>
 
+<ul>
+<li>call the Proc object the Symbol class created passing (total, number)
+
+<ul>
+<li>sends the <code>:+</code> method to be called on number passing total as a parameter.</li>
+</ul></li>
+</ul>
+
+<h2>TL;DR</h2>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1">#Shorthand way of summing numbers</span>
+<span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="o">].</span><span class="n">reduce</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:+</span><span class="p">)</span>
+
+<span class="c1"># Longer/Verbose way</span>
+<span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="o">].</span><span class="n">reduce</span> <span class="p">{</span> <span class="o">|</span><span class="n">number</span><span class="p">,</span> <span class="n">total</span><span class="o">|</span> <span class="n">number</span> <span class="o">+</span> <span class="n">total</span> <span class="p">}</span> 
+</code></pre></div>
 <p>Hopefully you find this shorthand syntax as useful and clean as I do.  </p>
 
 <p>Let me know what you think.</p>

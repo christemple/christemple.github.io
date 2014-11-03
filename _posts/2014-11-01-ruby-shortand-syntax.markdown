@@ -76,10 +76,21 @@ becomes:
 [1,2,3,4].reduce(0, &(Proc.new { |number, total| number.send(:+, total) }))
 => 10
 ```
-So each time our reduce methods yields our number, it will:
-call the Proc object the Symbol class created passing (total, number)
-sends the `:+` method to be called on number passing total as a parameter.
 
+So each time our reduce methods yields our number, it will:
+
+* call the Proc object the Symbol class created passing (total, number)
+  * sends the `:+` method to be called on number passing total as a parameter.
+
+## TL;DR
+
+```ruby
+#Shorthand way of summing numbers
+[1,2,3,4].reduce(&:+)
+
+# Longer/Verbose way
+[1,2,3,4].reduce { |number, total| number + total } 
+```
 
 Hopefully you find this shorthand syntax as useful and clean as I do.  
 
