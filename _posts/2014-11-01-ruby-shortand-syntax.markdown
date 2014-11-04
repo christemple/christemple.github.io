@@ -1,7 +1,9 @@
 ---
 layout: post
 title: Ruby &raquo; shorthand syntax for each, map, reduce & more
+snippet: Ruby has a nice shorthand syntax for methods that use blocks and accept Procs, which is very useful when working with enumerables e.g. each, map, reduce etc. 
 date: 2014-11-01
+category: ruby
 ---
 
 Ruby has a nice shorthand syntax for methods that use blocks and accept Procs, which is very useful when working with enumerables e.g. each, map, reduce etc. 

@@ -6,7 +6,7 @@ title: Chris Temple
 {% for post in site.posts %}
   <article>
   	<header><h1><a href="{{ post.url }}">{{ post.title }}</a></h1></header>
-  	<div class="content">{{post.content}}</div>
+  	<div class="content">{{post.snippet}}</div>
   	<footer>{{ post.date | date_to_string }}</footer>
   </article>
 {% endfor %}
