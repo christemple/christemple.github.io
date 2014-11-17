@@ -15,11 +15,10 @@ body > header
     padding-top: 25px
     font-family: "Pacifico", "Helvetica Neue", "Helvetica", sans-serif
     +mobile
-      +span-columns(1)
+      +span-columns(3)
       padding-top: 15px
   #avatar
     +span-columns(6)
-    +omega
     text-align: right
     img    
       height: 70px
@@ -55,12 +54,16 @@ article
       display: inline-block
       text-align: center
       font-size: 0.8em
-      padding-left: 15px
       .year
         font-size: 1.4em
       .category
         background-color: #eaeaea
         margin-top: 5px
+    +mobile
+      h1
+        +span-columns(3)
+      .date
+        +span-columns(1)
   .content
     line-height: 130%
     +tablet

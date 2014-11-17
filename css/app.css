@@ -128,7 +128,7 @@ body {
     body {
       display: block;
       float: left;
-      margin-right: 16.03631%;
+      margin-right: 7.42297%;
       width: 100%;
       font-size: 14px;
       line-height: 18px; }
@@ -185,6 +185,8 @@ article h1, article h2 {
   font-weight: bold; }
 article h1, article h2, article h3, article h4, article h5, article h6 {
   line-height: 100%; }
+article h1 {
+  font-size: 1.7em; }
 article h2 {
   padding: 20px 0; }
 article h3 {
@@ -224,7 +226,7 @@ body > header {
     body > header {
       display: block;
       float: left;
-      margin-right: 16.03631%;
+      margin-right: 7.42297%;
       width: 100%;
       min-height: 70px; }
       body > header:last-child {
@@ -242,12 +244,12 @@ body > header {
       body > header h1 {
         display: block;
         float: left;
-        margin-right: 16.03631%;
+        margin-right: 7.42297%;
         width: 100%;
         display: block;
         float: left;
-        margin-right: 16.03631%;
-        width: 41.98184%;
+        margin-right: 7.42297%;
+        width: 73.14426%;
         padding-top: 15px; }
         body > header h1:last-child {
           margin-right: 0; }
@@ -258,7 +260,6 @@ body > header {
     float: left;
     margin-right: 2.35765%;
     width: 48.82117%;
-    margin-right: 0;
     text-align: right; }
     body > header #avatar:last-child {
       margin-right: 0; }
@@ -269,12 +270,12 @@ body > header {
       body > header #avatar {
         display: block;
         float: left;
-        margin-right: 16.03631%;
+        margin-right: 7.42297%;
         width: 100%;
         display: block;
         float: left;
-        margin-right: 16.03631%;
-        width: 41.98184%; }
+        margin-right: 7.42297%;
+        width: 19.43277%; }
         body > header #avatar:last-child {
           margin-right: 0; }
         body > header #avatar:last-child {
@@ -334,8 +335,7 @@ article {
       width: 14.70196%;
       display: inline-block;
       text-align: center;
-      font-size: 0.8em;
-      padding-left: 15px; }
+      font-size: 0.8em; }
       article header .date:last-child {
         margin-right: 0; }
       article header .date .year {
@@ -343,6 +343,28 @@ article {
       article header .date .category {
         background-color: #eaeaea;
         margin-top: 5px; }
+    @media screen and (max-width: 400px) {
+      article header {
+        display: block;
+        float: left;
+        margin-right: 7.42297%;
+        width: 100%; }
+        article header:last-child {
+          margin-right: 0; }
+        article header h1 {
+          display: block;
+          float: left;
+          margin-right: 7.42297%;
+          width: 73.14426%; }
+          article header h1:last-child {
+            margin-right: 0; }
+        article header .date {
+          display: block;
+          float: left;
+          margin-right: 7.42297%;
+          width: 19.43277%; }
+          article header .date:last-child {
+            margin-right: 0; } }
   article .content {
     line-height: 130%; }
     @media screen and (max-width: 768px) {
