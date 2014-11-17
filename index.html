@@ -5,8 +5,14 @@ title: Chris Temple
 
 {% for post in site.posts %}
   <article>
-  	<header><h1><a href="{{ post.url }}">{{ post.title }}</a></h1></header>
+  	<header>
+      <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+      <div class="date">
+        <div class="day-month">{{ post.date | date: "%d %b" }}</div>
+        <div class="year">{{ post.date | date: "%Y" }}</div>
+        <div class="category">{{ post.category }}</div>
+      </div>
+    </header>
   	<div class="content">{{post.snippet}}</div>
-  	<footer>{{ post.date | date_to_string }}</footer>
   </article>
 {% endfor %}

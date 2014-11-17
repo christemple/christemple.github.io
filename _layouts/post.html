@@ -4,9 +4,15 @@ layout: default
 
 
 <article>
-	<header><h1>{{ page.title }}</h1></header>
+	<header>
+    <h1>{{ page.title }}</h1>
+      <div class="date">
+        <div class="day-month">{{ page.date | date: "%d %b" }}</div>
+        <div class="year">{{ page.date | date: "%Y" }}</div>
+        <div class="category">{{ page.category }}</div>
+      </div>
+  </header>
 	<div class="content">
-		<p class="date">{{ page.date | date_to_string }}</p>
 		{{ content }}
 	</div>
 </article>

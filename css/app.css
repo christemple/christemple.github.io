@@ -135,9 +135,6 @@ body {
       body:last-child {
         margin-right: 0; } }
 
-header {
-  padding-bottom: 20px; }
-
 h1 {
   font-size: 2em; }
 
@@ -188,8 +185,6 @@ article h1, article h2 {
   font-weight: bold; }
 article h1, article h2, article h3, article h4, article h5, article h6 {
   line-height: 100%; }
-article h1 {
-  padding: 20px 0 0; }
 article h2 {
   padding: 20px 0; }
 article h3 {
@@ -215,44 +210,25 @@ article h3 {
 
 body > header {
   padding: 10px;
-  background-color: #262b34; }
+  min-height: 120px; }
+  @media screen and (max-width: 768px) {
+    body > header {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 100%;
+      min-height: 100px; }
+      body > header:last-child {
+        margin-right: 0; } }
   @media screen and (max-width: 400px) {
     body > header {
       display: block;
       float: left;
       margin-right: 16.03631%;
       width: 100%;
-      text-align: center; }
+      min-height: 70px; }
       body > header:last-child {
         margin-right: 0; } }
-  body > header #avatar {
-    display: block;
-    float: left;
-    margin-right: 2.35765%;
-    width: 14.70196%;
-    margin-right: 0; }
-    body > header #avatar:last-child {
-      margin-right: 0; }
-    body > header #avatar img {
-      height: 70px;
-      border-radius: 50%;
-      border: 2px solid #3e4b5f; }
-    @media screen and (max-width: 400px) {
-      body > header #avatar {
-        display: block;
-        float: left;
-        margin-right: 16.03631%;
-        width: 100%;
-        display: block;
-        float: left;
-        margin-right: 16.03631%;
-        width: 100%; }
-        body > header #avatar:last-child {
-          margin-right: 0; }
-        body > header #avatar:last-child {
-          margin-right: 0; } }
-  body > header h1, body > header a {
-    color: #e4e4e4; }
   body > header h1 {
     display: block;
     float: left;
@@ -271,28 +247,26 @@ body > header {
         display: block;
         float: left;
         margin-right: 16.03631%;
-        width: 100%;
-        padding-top: 10px;
-        margin-bottom: 20px; }
+        width: 41.98184%;
+        padding-top: 15px; }
         body > header h1:last-child {
           margin-right: 0; }
         body > header h1:last-child {
           margin-right: 0; } }
-  body > header nav {
+  body > header #avatar {
     display: block;
     float: left;
     margin-right: 2.35765%;
-    width: 31.76157%;
-    font-size: 1.1em;
-    text-align: right;
-    padding-top: 25px; }
-    body > header nav:last-child {
+    width: 48.82117%;
+    margin-right: 0;
+    text-align: right; }
+    body > header #avatar:last-child {
       margin-right: 0; }
-    body > header nav li {
-      display: inline-block;
-      padding: 0 10px; }
+    body > header #avatar img {
+      height: 70px;
+      border-radius: 50%; }
     @media screen and (max-width: 400px) {
-      body > header nav {
+      body > header #avatar {
         display: block;
         float: left;
         margin-right: 16.03631%;
@@ -300,13 +274,13 @@ body > header {
         display: block;
         float: left;
         margin-right: 16.03631%;
-        width: 100%;
-        padding: 0;
-        text-align: center; }
-        body > header nav:last-child {
+        width: 41.98184%; }
+        body > header #avatar:last-child {
           margin-right: 0; }
-        body > header nav:last-child {
-          margin-right: 0; } }
+        body > header #avatar:last-child {
+          margin-right: 0; }
+        body > header #avatar img {
+          height: 50px; } }
 
 body section {
   display: block;
@@ -323,7 +297,7 @@ body section {
       float: left;
       margin-right: 2.35765%;
       width: 100%;
-      padding: 0 5px; }
+      padding: 0 10px; }
       body section:last-child {
         margin-right: 0; } }
 
@@ -333,8 +307,42 @@ body > footer {
 
 article {
   margin-bottom: 50px; }
-  article header a {
-    color: #444444; }
+  article header {
+    *zoom: 1;
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 0 30px; }
+    article header:before, article header:after {
+      content: " ";
+      display: table; }
+    article header:after {
+      clear: both; }
+    article header h1 {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 82.94039%; }
+      article header h1:last-child {
+        margin-right: 0; }
+    article header a {
+      color: #444444; }
+    article header .date {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 14.70196%;
+      display: inline-block;
+      text-align: center;
+      font-size: 0.8em;
+      padding-left: 15px; }
+      article header .date:last-child {
+        margin-right: 0; }
+      article header .date .year {
+        font-size: 1.4em; }
+      article header .date .category {
+        background-color: #eaeaea;
+        margin-top: 5px; }
   article .content {
     line-height: 130%; }
     @media screen and (max-width: 768px) {
@@ -346,9 +354,6 @@ article {
         line-height: 150%; }
         article .content:last-child {
           margin-right: 0; } }
-    article .content .date {
-      font-size: 0.9em;
-      opacity: 0.7; }
   article footer {
     margin-top: 20px;
     padding: 10px;
