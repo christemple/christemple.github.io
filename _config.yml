@@ -2,3 +2,4 @@ name: Chris Temple
 markdown: redcarpet
 pygments: true
 permalink: /:categories/:title
+exclude: ["Gemfile*", "Guardfile", "Rakefile"] 
