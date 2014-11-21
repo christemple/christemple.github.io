@@ -6,13 +6,16 @@ layout: default
 <article>
 	<header>
     <h1>{{ page.title }}</h1>
-      <div class="date">
-        <div class="day-month">{{ page.date | date: "%d %b" }}</div>
-        <div class="year">{{ page.date | date: "%Y" }}</div>
-        <div class="category">{{ page.category }}</div>
-      </div>
+    <div class="date">
+      <div class="day-month">{{ page.date | date: "%d %b" }}</div>
+      <div class="year">{{ page.date | date: "%Y" }}</div>
+      <div class="category">{{ page.category }}</div>
+    </div>
   </header>
 	<div class="content">
 		{{ content }}
 	</div>
+
+  {% include comments.html %}
+
 </article>

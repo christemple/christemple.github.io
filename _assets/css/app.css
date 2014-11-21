@@ -176,23 +176,23 @@ body > header {
         body > header #avatar img {
           height: 50px; } }
 
-body section {
+body #content {
   display: block;
   float: left;
   margin-right: 2.35765%;
   width: 100%;
   margin-bottom: 30px;
   min-height: 500px; }
-  body section:last-child {
+  body #content:last-child {
     margin-right: 0; }
   @media screen and (max-width: 768px) {
-    body section {
+    body #content {
       display: block;
       float: left;
       margin-right: 2.35765%;
       width: 100%;
       padding: 0 10px; }
-      body section:last-child {
+      body #content:last-child {
         margin-right: 0; } }
 
 body > footer {
@@ -269,9 +269,5 @@ article {
         line-height: 150%; }
         article .content:last-child {
           margin-right: 0; } }
-  article footer {
-    margin-top: 20px;
-    padding: 10px;
-    border-top: 1px solid #eaeaea;
-    opacity: 0.7;
-    text-align: right; }
+  article #comments {
+    margin: 50px 0 20px; }
