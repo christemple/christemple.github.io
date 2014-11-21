@@ -1,6 +1,5 @@
 <section id="comments">
-  <h1>Env: {{ site.env }}</h1>
-  {% if site.env == 'production' %}
+  {% unless site.env == 'development' %}
     <div id="disqus_thread"></div>
     <script type="text/javascript">
         var disqus_shortname = 'whynotcode'; 
@@ -12,6 +11,6 @@
     </script>
   {% else %}
     <h2>Disqus comments go here in production</h2>
-  {% endif %}
+  {% endunless %}
 </section>
 
