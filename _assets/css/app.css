@@ -9,24 +9,12 @@ body {
   color: #444444; }
   @media screen and (max-width: 768px) {
     body {
-      display: block;
-      float: left;
-      margin-right: 2.35765%;
-      width: 100%;
       font-size: 15px;
-      line-height: 20px; }
-      body:last-child {
-        margin-right: 0; } }
+      line-height: 20px; } }
   @media screen and (max-width: 400px) {
     body {
-      display: block;
-      float: left;
-      margin-right: 7.42297%;
-      width: 100%;
       font-size: 14px;
-      line-height: 18px; }
-      body:last-child {
-        margin-right: 0; } }
+      line-height: 18px; } }
 
 h1 {
   font-size: 2em; }
@@ -44,13 +32,16 @@ a {
     text-decoration: underline; }
 
 pre {
-  padding: 10px;
   margin: 20px 0;
+  padding: 10px;
   border-radius: 5px;
   background-color: #f7f7f7;
   border: 1px solid lightgrey;
   font-family: Courier, "Helvetica", sans-serif;
   overflow-x: auto; }
+  @media screen and (max-width: 400px) {
+    pre {
+      margin: 15px 0; } }
   pre::-webkit-scrollbar {
     height: 8px; }
   pre::-webkit-scrollbar-track {
@@ -61,14 +52,17 @@ pre {
     -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5); }
 
 blockquote {
-  padding: 10px;
   margin: 20px 0;
+  padding: 10px;
   border-radius: 5px;
   background-color: #f7f7f7;
   border: 1px solid lightgrey;
   font-family: Courier, "Helvetica", sans-serif;
   font-style: italic;
   quotes: "\201C" "\201D" "\2018" "\2019"; }
+  @media screen and (max-width: 400px) {
+    blockquote {
+      margin: 15px 0; } }
   blockquote p:first-child::before {
     content: open-quote; }
   blockquote p:last-child::after {
@@ -92,6 +86,9 @@ article h3 {
   .content ul li {
     margin-left: 40px; }
 
+ol li {
+  padding: 0 0 10px 20px; }
+
 .site-wrapper {
   *zoom: 1;
   max-width: 768px;
@@ -103,101 +100,87 @@ article h3 {
   .site-wrapper:after {
     clear: both; }
 
-body > header {
+header[role=banner] {
   padding: 10px;
   min-height: 120px; }
   @media screen and (max-width: 768px) {
-    body > header {
-      display: block;
-      float: left;
-      margin-right: 2.35765%;
-      width: 100%;
-      min-height: 100px; }
-      body > header:last-child {
-        margin-right: 0; } }
+    header[role=banner] {
+      min-height: 100px; } }
   @media screen and (max-width: 400px) {
-    body > header {
-      display: block;
-      float: left;
-      margin-right: 7.42297%;
-      width: 100%;
-      min-height: 70px; }
-      body > header:last-child {
-        margin-right: 0; } }
-  body > header h1 {
+    header[role=banner] {
+      min-height: 70px; } }
+  header[role=banner] h1 {
     display: block;
     float: left;
     margin-right: 2.35765%;
     width: 48.82117%;
     padding-top: 25px;
     font-family: "Pacifico", "Helvetica Neue", "Helvetica", sans-serif; }
-    body > header h1:last-child {
+    header[role=banner] h1:last-child {
       margin-right: 0; }
     @media screen and (max-width: 400px) {
-      body > header h1 {
-        display: block;
-        float: left;
-        margin-right: 7.42297%;
-        width: 100%;
+      header[role=banner] h1 {
         display: block;
         float: left;
         margin-right: 7.42297%;
         width: 73.14426%;
         padding-top: 15px; }
-        body > header h1:last-child {
-          margin-right: 0; }
-        body > header h1:last-child {
+        header[role=banner] h1:last-child {
           margin-right: 0; } }
-  body > header #avatar {
+  header[role=banner] #avatar {
     display: block;
     float: left;
     margin-right: 2.35765%;
     width: 48.82117%;
     text-align: right; }
-    body > header #avatar:last-child {
+    header[role=banner] #avatar:last-child {
       margin-right: 0; }
-    body > header #avatar img {
+    header[role=banner] #avatar img {
       height: 70px;
       border-radius: 50%; }
     @media screen and (max-width: 400px) {
-      body > header #avatar {
-        display: block;
-        float: left;
-        margin-right: 7.42297%;
-        width: 100%;
+      header[role=banner] #avatar {
         display: block;
         float: left;
         margin-right: 7.42297%;
         width: 19.43277%; }
-        body > header #avatar:last-child {
+        header[role=banner] #avatar:last-child {
           margin-right: 0; }
-        body > header #avatar:last-child {
-          margin-right: 0; }
-        body > header #avatar img {
+        header[role=banner] #avatar img {
           height: 50px; } }
 
-body #content {
-  display: block;
-  float: left;
-  margin-right: 2.35765%;
-  width: 100%;
+#content {
   margin-bottom: 30px;
   min-height: 500px; }
-  body #content:last-child {
-    margin-right: 0; }
   @media screen and (max-width: 768px) {
-    body #content {
-      display: block;
-      float: left;
-      margin-right: 2.35765%;
-      width: 100%;
-      padding: 0 10px; }
-      body #content:last-child {
-        margin-right: 0; } }
+    #content {
+      padding: 0 10px; } }
 
-body > footer {
-  padding: 10px;
-  border-top: 1px solid #eaeaea; }
+footer {
+  padding: 25px 0;
+  border-top: 1px solid #eaeaea;
+  line-height: 50%;
+  font-size: 0.6em;
+  text-align: right;
+  color: gray; }
+  footer #hosted-on-github, footer #powered-by-jekyll {
+    display: inline-block;
+    margin-left: 20px; }
+    @media screen and (max-width: 400px) {
+      footer #hosted-on-github, footer #powered-by-jekyll {
+        margin-left: 10px; } }
+    footer #hosted-on-github p, footer #powered-by-jekyll p {
+      padding-right: 10px; }
+    footer #hosted-on-github img, footer #powered-by-jekyll img {
+      opacity: 0.5;
+      height: 40px; }
+      footer #hosted-on-github img:hover, footer #powered-by-jekyll img:hover {
+        opacity: 1;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transition: opacity 0.5s;
+        -moz-transition: opacity 0.5s;
+        transition: opacity 0.5s; }
 
 article {
   margin-bottom: 50px; }
@@ -237,37 +220,27 @@ article {
         background-color: #eaeaea;
         margin-top: 5px; }
     @media screen and (max-width: 400px) {
-      article header {
+      article header h1 {
         display: block;
         float: left;
         margin-right: 7.42297%;
-        width: 100%; }
-        article header:last-child {
+        width: 73.14426%; }
+        article header h1:last-child {
           margin-right: 0; }
-        article header h1 {
-          display: block;
-          float: left;
-          margin-right: 7.42297%;
-          width: 73.14426%; }
-          article header h1:last-child {
-            margin-right: 0; }
-        article header .date {
-          display: block;
-          float: left;
-          margin-right: 7.42297%;
-          width: 19.43277%; }
-          article header .date:last-child {
-            margin-right: 0; } }
+      article header .date {
+        display: block;
+        float: left;
+        margin-right: 7.42297%;
+        width: 19.43277%; }
+        article header .date:last-child {
+          margin-right: 0; } }
   article .content {
     line-height: 130%; }
     @media screen and (max-width: 768px) {
       article .content {
-        display: block;
-        float: left;
-        margin-right: 2.35765%;
-        width: 100%;
-        line-height: 150%; }
-        article .content:last-child {
-          margin-right: 0; } }
+        line-height: 150%; } }
   article #comments {
     margin: 50px 0 20px; }
+    @media screen and (max-width: 768px) {
+      article #comments {
+        margin: 20px 0; } }

@@ -81,8 +81,8 @@ becomes:
 
 So each time our reduce methods yields our number, it will:
 
-* call the Proc object the Symbol class created passing (total, number)
-  * sends the `:+` method to be called on number passing total as a parameter.
+1. 1. Call the Proc object the Symbol class created passing (total, number)
+2. 2. Sends the `:+` method to be called on number passing total as a parameter.
 
 ## TL;DR
 

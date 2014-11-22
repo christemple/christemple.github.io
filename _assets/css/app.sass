@@ -3,7 +3,7 @@
 .site-wrapper
   +outer-container
 
-body > header
+header[role=banner]
   padding: 10px
   min-height: 120px
   +tablet
@@ -28,16 +28,34 @@ body > header
       img    
         height: 50px
 
-body #content 
-  +span-columns(12)
+#content 
   margin-bottom: 30px
   min-height: 500px
   +tablet
     padding: 0 10px
   
-body > footer
-  padding: 10px
+footer
+  padding: 25px 0
   border-top: 1px solid #eaeaea
+  line-height: 50%
+  font-size: 0.6em
+  text-align: right
+  color: #808080
+  #hosted-on-github, #powered-by-jekyll
+    display: inline-block
+    margin-left: 20px
+    +mobile
+      margin-left: 10px
+    p
+      padding-right: 10px
+    img
+      opacity: 0.5
+      height: 40px
+      &:hover
+        opacity: 1
+        +backface-visibility(hidden)
+        +transition(opacity 0.5s )
+
 
 
 article
@@ -70,3 +88,5 @@ article
       line-height: 150%
   #comments
     margin: 50px 0 20px
+    +tablet
+      margin: 20px 0
