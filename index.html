@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Chris Temple
+title: Chris Temple - things I find interesting
 ---
 
 {% for post in site.posts %}
@@ -13,6 +13,6 @@ title: Chris Temple
         <div class="category">{{ post.category }}</div>
       </div>
     </header>
-  	<div class="content">{{post.snippet}}</div>
+  	<div class="content">{{post.excerpt}}</div>
   </article>
 {% endfor %}

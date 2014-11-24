@@ -4,7 +4,7 @@
   box-sizing: border-box; }
 
 body {
-  font: 20px "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
+  font: 18px "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
   line-height: 24px;
   color: #444444; }
   @media screen and (max-width: 768px) {

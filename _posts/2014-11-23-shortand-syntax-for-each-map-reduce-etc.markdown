@@ -1,12 +1,14 @@
 ---
 layout: post
-title: Ruby &raquo; shorthand syntax for each, map, reduce & more
-snippet: Ruby has a nice shorthand syntax for methods that use blocks and accept Procs, which is very useful when working with enumerables e.g. each, map, reduce etc. 
-date: 2014-11-01
+title: Shorthand syntax for each, map, reduce & more
+date: 2014-11-23
 category: ruby
+redirect_from: /ruby/ruby-shortand-syntax/
 ---
 
 Ruby has a nice shorthand syntax for methods that use blocks and accept Procs, which is very useful when working with enumerables e.g. each, map, reduce etc. 
+
+<!--more-->
 
 If you’ve been unaware of this syntax, to sum up the numbers in an array you’ve probably been writing code that looks like this:
 
@@ -44,7 +46,7 @@ The ampersand (&) character does something special when it is used on the last a
 [1,2,3,4].reduce(&:+)
 ```
 
-becomes
+becomes:
 
 ```ruby
 [1,2,3,4].reduce(:+.to_proc)
@@ -84,7 +86,7 @@ So each time our reduce methods yields our number, it will:
 1. 1. Call the Proc object the Symbol class created passing (total, number)
 2. 2. Sends the `:+` method to be called on number passing total as a parameter.
 
-## TL;DR
+## Recap
 
 ```ruby
 #Shorthand way of summing numbers

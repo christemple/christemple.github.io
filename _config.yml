@@ -1,5 +1,19 @@
 name: Chris Temple
 markdown: redcarpet
-pygments: true
+highlighter: 'pygments'
 permalink: /:categories/:title
 exclude: ["Gemfile*", "Guardfile", "Rakefile"] 
+excerpt_seperator: <!--more-->
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      type: "post"
+
+gems:
+  - jekyll-redirect-from
+  - jekyll-sitemap
+
