@@ -127,7 +127,7 @@ h1 {
   font-size: 2em; }
 
 h2 {
-  font-size: 1.5em; }
+  font-size: 1.4em; }
 
 h3 {
   font-size: 1.2em; }
@@ -195,6 +195,9 @@ article h3 {
 
 ol li {
   padding: 0 0 10px 20px; }
+
+strong {
+  font-weight: bold; }
 
 .site-wrapper {
   *zoom: 1;
