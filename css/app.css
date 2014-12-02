@@ -105,6 +105,7 @@ table {
 .highlight .vi { color: #008080 } /* Name.Variable.Instance */
 .highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
 
+@charset "UTF-8";
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -113,7 +114,7 @@ table {
 body {
   font: 18px "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
   line-height: 24px;
-  color: #444444; }
+  color: #444; }
   @media screen and (max-width: 768px) {
     body {
       font-size: 15px;
@@ -143,7 +144,7 @@ pre {
   padding: 10px;
   border-radius: 5px;
   background-color: #f7f7f7;
-  border: 1px solid lightgrey;
+  border: 1px solid lightgray;
   font-family: Courier, "Helvetica", sans-serif;
   overflow-x: auto; }
   @media screen and (max-width: 400px) {
@@ -163,10 +164,10 @@ blockquote {
   padding: 10px;
   border-radius: 5px;
   background-color: #f7f7f7;
-  border: 1px solid lightgrey;
+  border: 1px solid lightgray;
   font-family: Courier, "Helvetica", sans-serif;
   font-style: italic;
-  quotes: "\201C" "\201D" "\2018" "\2019"; }
+  quotes: "“" "”" "‘" "’"; }
   @media screen and (max-width: 400px) {
     blockquote {
       margin: 15px 0; } }
@@ -223,25 +224,19 @@ header[role=banner] {
     display: block;
     float: left;
     margin-right: 2.35765%;
-    width: 48.82117%;
+    width: 74.41059%;
     padding-top: 25px;
-    font-family: "Pacifico", "Helvetica Neue", "Helvetica", sans-serif; }
+    font-family: Courier; }
     header[role=banner] h1:last-child {
       margin-right: 0; }
     @media screen and (max-width: 400px) {
       header[role=banner] h1 {
-        display: block;
-        float: left;
-        margin-right: 7.42297%;
-        width: 73.14426%;
-        padding-top: 15px; }
-        header[role=banner] h1:last-child {
-          margin-right: 0; } }
+        padding-top: 15px; } }
   header[role=banner] #avatar {
     display: block;
     float: left;
     margin-right: 2.35765%;
-    width: 48.82117%;
+    width: 23.23176%;
     text-align: right; }
     header[role=banner] #avatar:last-child {
       margin-right: 0; }
@@ -249,15 +244,8 @@ header[role=banner] {
       height: 70px;
       border-radius: 50%; }
     @media screen and (max-width: 400px) {
-      header[role=banner] #avatar {
-        display: block;
-        float: left;
-        margin-right: 7.42297%;
-        width: 19.43277%; }
-        header[role=banner] #avatar:last-child {
-          margin-right: 0; }
-        header[role=banner] #avatar img {
-          height: 50px; } }
+      header[role=banner] #avatar img {
+        height: 50px; } }
 
 #content {
   margin-bottom: 30px;
@@ -272,7 +260,7 @@ footer {
   line-height: 50%;
   font-size: 0.6em;
   text-align: right;
-  color: gray; }
+  color: #808080; }
   footer #hosted-on-github, footer #powered-by-jekyll {
     display: inline-block;
     margin-left: 20px; }
@@ -313,7 +301,7 @@ article {
       article header h1:last-child {
         margin-right: 0; }
     article header a {
-      color: #444444; }
+      color: #444; }
     article header .date {
       display: block;
       float: left;
@@ -329,21 +317,6 @@ article {
       article header .date .category {
         background-color: #eaeaea;
         margin-top: 5px; }
-    @media screen and (max-width: 400px) {
-      article header h1 {
-        display: block;
-        float: left;
-        margin-right: 7.42297%;
-        width: 73.14426%; }
-        article header h1:last-child {
-          margin-right: 0; }
-      article header .date {
-        display: block;
-        float: left;
-        margin-right: 7.42297%;
-        width: 19.43277%; }
-        article header .date:last-child {
-          margin-right: 0; } }
   article .content {
     line-height: 130%; }
     @media screen and (max-width: 768px) {
