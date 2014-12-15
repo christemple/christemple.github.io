@@ -20,12 +20,13 @@ Let's assume that we're building an app for an agency with agents who have diffe
 ```ruby
 # agent.rb
 class Agent
-  def initialize(name)
+  def initialize(name, level)
     @name = name
+    @clearance_level = level
   end
 
   def has_clearance?(clearance_level_required)
-    clearance_level < clearance_level_required 
+    @clearance_level < clearance_level_required 
   end
 end
 ```
