@@ -319,6 +319,8 @@ article {
       article header .date .category {
         background-color: #eaeaea;
         margin-top: 5px; }
+  article img {
+    width: 100%; }
   article #comments {
     margin: 50px 0 20px; }
     @media screen and (max-width: 768px) {
