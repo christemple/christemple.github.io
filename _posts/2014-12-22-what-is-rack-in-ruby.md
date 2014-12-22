@@ -1,6 +1,6 @@
 ---
 layout: post
-title: What is Rack in Ruby
+title: What is Rack in Ruby?
 date: 2014-12-22
 category: ruby
 ---
