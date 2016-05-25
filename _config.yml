@@ -1,8 +1,8 @@
 name: '{why not}.io'
 markdown: redcarpet
 highlighter: 'pygments'
-permalink: /:categories/:title
-exclude: ["Gemfile*", "Guardfile", "Rakefile"] 
+permalink: /:categories/:title/
+exclude: ["Gemfile*", "Guardfile", "Rakefile"]
 excerpt_seperator: <!--more-->
 
 defaults:
@@ -16,4 +16,3 @@ defaults:
 gems:
   - jekyll-redirect-from
   - jekyll-sitemap
-
