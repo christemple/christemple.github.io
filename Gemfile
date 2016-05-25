@@ -6,6 +6,7 @@ gem 'jekyll-redirect-from'
 gem 'rake'
 gem 'bourbon'
 gem 'neat'
+gem 'redcarpet'
 
 group :development do
 	gem 'guard'

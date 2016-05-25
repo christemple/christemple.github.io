@@ -3,10 +3,10 @@ layout: post
 title: Shorthand syntax for each, map, reduce & more
 date: 2014-11-23
 category: ruby
-redirect_from: /ruby/ruby-shortand-syntax/
+redirect_to: https://medium.com/@christemple/shorthand-syntax-for-each-map-reduce-more-a790ba12edc9
 ---
 
-Ruby has a nice shorthand syntax for methods that use blocks and accept Procs, which is very useful when working with enumerables e.g. each, map, reduce etc. 
+Ruby has a nice shorthand syntax for methods that use blocks and accept Procs, which is very useful when working with enumerables e.g. each, map, reduce etc.
 
 <!--more-->
 
@@ -57,7 +57,7 @@ becomes:
 ```ruby
 def to_proc
   Proc.new { |obj, *args| obj.send(self, *args) }
-end 
+end
 ```
 
 \* This example assumes you already know how the [Object#send](http://ruby-doc.org/core-2.1.4/Object.html#method-i-send) methods works.
@@ -65,13 +65,13 @@ end
 Given what we know so far, we can assume the following:
 
 ```ruby
-[1,2,3,4].reduce(0, &:+) 
+[1,2,3,4].reduce(0, &:+)
 ```
 
 becomes:
 
 ```ruby
-[1,2,3,4].reduce(0, :+.to_proc) 
+[1,2,3,4].reduce(0, :+.to_proc)
 ```
 
 `to_proc` would return a Proc similar to:
@@ -93,10 +93,9 @@ So each time our reduce methods yields our number, it will:
 [1,2,3,4].reduce(&:+)
 
 # Longer/Verbose way
-[1,2,3,4].reduce { |number, total| number + total } 
+[1,2,3,4].reduce { |number, total| number + total }
 ```
 
 Hopefully you find this shorthand syntax as useful and clean as I do.  
 
 Let me know what you think.
-

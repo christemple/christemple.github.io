@@ -3,6 +3,7 @@ layout: post
 title: What is Rack in Ruby?
 date: 2014-12-22
 category: ruby
+redirect_to: https://medium.com/@christemple/what-is-rack-in-ruby-7e0615f1d9b6
 ---
 
 If you have been in the Ruby community for any length of time, you have likely heard about Rack, probably along the lines of something being Rack-based, implements Rack or Rack middleware. Hopefully this post will help you understand exactly what everyone is talking about.
@@ -19,11 +20,11 @@ A minimal interface is nothing more than a component that is common ground and s
 
 When building web apps with Ruby we always have two components that need to work together; the web server and the Ruby app.  
 
-To understand why Rack is so useful let's assume we want to build a personal website about our hobbies, experiences, portfolio etc. using [Ruby on Rails](http://rubyonrails.org/) and see how our web app would handle requests from users when we **don't** and **do** use Rack. 
+To understand why Rack is so useful let's assume we want to build a personal website about our hobbies, experiences, portfolio etc. using [Ruby on Rails](http://rubyonrails.org/) and see how our web app would handle requests from users when we **don't** and **do** use Rack.
 
 ## Life without the Rack interface
 
-We just installed Rails and created our app and have just noticed that it uses [WEBrick](http://www.ruby-doc.org/stdlib-2.0/libdoc/webrick/rdoc/WEBrick.html) as its web server because that’s what it has been built to talk to. 
+We just installed Rails and created our app and have just noticed that it uses [WEBrick](http://www.ruby-doc.org/stdlib-2.0/libdoc/webrick/rdoc/WEBrick.html) as its web server because that’s what it has been built to talk to.
 
 So here’s the journey of what a request for your portfolio page might look like:
 
@@ -31,7 +32,7 @@ So here’s the journey of what a request for your portfolio page might look lik
 
 Everything is working perfectly and we finish building our website.
 
-After some time passes we find out that a new web server called [Puma](http://puma.io) is available for Ruby apps that is much faster than WEBrick.  The Ruby community is excited about using it, yet the most popular framework for Ruby (Rails), the one that we chose for our app, only knows how to speak to WEBrick and it would take months of work to get it to talk to Puma. 
+After some time passes we find out that a new web server called [Puma](http://puma.io) is available for Ruby apps that is much faster than WEBrick.  The Ruby community is excited about using it, yet the most popular framework for Ruby (Rails), the one that we chose for our app, only knows how to speak to WEBrick and it would take months of work to get it to talk to Puma.
 
 This is going to cause issues:
 
@@ -56,7 +57,7 @@ The Puma webserver has been “built for speed and parallelism”, and lucky for
 
 ### Example: Switching from Ruby on Rails to Sinatra
 
-The simple flexibility also applies to the Ruby framework side of this portfolio request.  We can simply decide to start using the Rack based Ruby framework known as Sinatra as our Ruby framework and replace our Ruby on Rails app without any modifications to the webserver we’re using: 
+The simple flexibility also applies to the Ruby framework side of this portfolio request.  We can simply decide to start using the Rack based Ruby framework known as Sinatra as our Ruby framework and replace our Ruby on Rails app without any modifications to the webserver we’re using:
 
 ![Example of Puma Rack and Sinatra]({{ site.url }}/images/rack-in-ruby/puma-rack-sinatra.png)
 
@@ -66,10 +67,9 @@ The Rack interface sits between our chosen web servers and Ruby apps to give us 
 
 Benefits of Rack:
 
-* Easily switch web servers 
-* Easily switch Ruby frameworks 
+* Easily switch web servers
+* Easily switch Ruby frameworks
 
 ### Coming soon
 
-Now that we know how Rack works we can start building some cool Rack middleware. 
-
+Now that we know how Rack works we can start building some cool Rack middleware.

@@ -3,6 +3,7 @@ layout: post
 title: Delegating with Forwardable in Ruby
 date: 2014-11-26
 category: ruby
+redirect_to: https://medium.com/@christemple/delegating-with-forwardable-in-ruby-82b2fe382d0e
 ---
 
 Delegation in programming is simply a matter of passing responsibility to an object more suitable to handle a request.
@@ -26,13 +27,13 @@ class Agent
   end
 
   def has_clearance?(clearance_level_required)
-    @clearance_level < clearance_level_required 
+    @clearance_level < clearance_level_required
   end
 end
 ```
 
-If we lived in a simple world, this code would suffice in getting the job done; 
-reality however is that now there are multiple aspects to security at this organisation such as: 
+If we lived in a simple world, this code would suffice in getting the job done;
+reality however is that now there are multiple aspects to security at this organisation such as:
 access rights to files, rooms, secret headquarters etc.
 
 Given all of these extra security features, should the agent be responsible for taking care of them all?
@@ -53,10 +54,10 @@ class ClearanceLevel
   def initialize(agent)
     @level = level
   end
-  
+
   def is_newb?
     @level.zero?
-  end 
+  end
 
   def is_secret?
     @level > 4
@@ -67,13 +68,13 @@ class ClearanceLevel
   end
 
   def has_clearance?(level_required)
-    @level <= level_required 
+    @level <= level_required
   end
 end
 ```
 
-Okay, so now the ClearanceLevel class is responsible for deciding on what level of clearance an agent 
-has, however now if we want to do anything useful with our agent the code is going to look 
+Okay, so now the ClearanceLevel class is responsible for deciding on what level of clearance an agent
+has, however now if we want to do anything useful with our agent the code is going to look
 something like this:
 
 ```ruby
@@ -81,13 +82,13 @@ agent = Agent.new("Phil", 10)
 if agent.clearance_level.has_clearance?(4)
   puts "Welcome to Sector 4 #{agent.name}."
   if agent.clearance_level.is_top_secret?
-    puts "You've got top secret agent clearance!" 
+    puts "You've got top secret agent clearance!"
   end
 end
 ```
 
 Having to reference `agent.clearance` each time to find out information on an agents' clearance
-level could get repetitive, it would be a lot nicer if we could just ask clearance questions on 
+level could get repetitive, it would be a lot nicer if we could just ask clearance questions on
 `agent`, for example:
 
 ```ruby
@@ -95,13 +96,13 @@ agent = Agent.new("Phil", 10)
 if agent.has_clearance?(4)
   puts "Welcome to Sector 4 #{agent.name}."
   if agent.is_top_secret?
-    puts "You've got top secret agent clearance!" 
+    puts "You've got top secret agent clearance!"
   end
 end
 ```
 
 ### Without Forwardable
-Without knowing about the Ruby Forwardable module, to accomplish this we would write wrapper functions in `agent.rb` 
+Without knowing about the Ruby Forwardable module, to accomplish this we would write wrapper functions in `agent.rb`
 
 ```ruby
 # agent.rb
@@ -119,11 +120,11 @@ class Agent
   def is_top_secret?
     @clearance_level.is_top_secret?
   end
-  
+
   [...]
 end
 
-``` 
+```
 ### With Forwardable
 But, since we now know that the Forwardable module can forward  method calls to an object more responsible,
 we can use it to delegate the wrapper methods to `@clearance_level` in the `agent` like so:
@@ -142,10 +143,10 @@ class Agent
   def_delegators :@clearance_level, :is_newb?, :is_secret?, :is_top_secret?, :has_clearance?
 end
 
-``` 
+```
 
 So by using the Forwardable module we can now call our clearance methods directly on our agent objects
-were they'll be delegated to the `@clearance_level`, meaning we've been able to keep `agent.rb` simple 
+were they'll be delegated to the `@clearance_level`, meaning we've been able to keep `agent.rb` simple
 and clean instead of littering it with wrapper methods. Yay!
 
 I hope you find this helpful.
